@@ -100,3 +100,37 @@ button, .button
     background-color: $accent_sec_light
     border-radius: 2rem
     border: 1px solid currentColor
+
+.button_whattsapp
+  border-radius: 2rem
+  color: $bg
+  padding: 1.4rem 2rem
+  svg+span
+    margin-left: 1rem
+  background-color: $whatsapp
+  border-color: $whatsapp
+  &:hover, &:active
+    border-radius: 2rem
+    color: $bg
+    background-color: $accent_sec_heavy
+    border-color:  $accent_sec_heavy
+  &:focus
+    color: $bg
+    background-color: $whatsapp
+    border-color: $whatsapp
+    border-radius: 2rem
+.button_telegramm
+
+  @extend .button_whattsapp
+  background-color: $telegramm
+  border-color: $telegramm
+  &:hover, &:active
+    border-radius: 2rem
+    color: $bg
+    background-color: $dark_blue
+    border-color:  $dark_blue
+  &:focus
+    color: $bg
+    background-color: $telegramm
+    border-color: $telegramm
+    border-radius: 2rem

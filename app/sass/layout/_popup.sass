@@ -77,3 +77,29 @@
   gap: 2rem
   input[type="submit"]
     margin-top: 2rem
+.popup_actionButtons
+  display: flex
+  justify-content: space-between
+  margin-top: 2rem
+  width: 100%
+.popup_showFormButton
+  margin-top: 1.6rem
+  margin-bottom: 0
+  width: 100%
+  overflow: hidden
+  cursor: pointer
+.show_small_form+.popup_showFormButton+.popup_form
+  overflow: hidden
+  max-height: 0
+  margin: 0
+  padding: 0
+  opacity: 0
+.show_small_form:checked+.popup_showFormButton
+  max-height: 0
+  margin: 0
+  padding: 0
+.show_small_form:checked+.popup_showFormButton+.popup_form
+  max-height: unset
+  margin-top: 4rem
+  padding: 0
+  opacity: 1
