@@ -1,0 +1,523 @@
+@use 'abstracts' as *
+@use 'base' as *
+@use 'utilities' as *
+@use 'components' as *
+@use 'layout' as *
+//все стили до рефакторинга здесь
+
+.map svg
+  a:hover
+    polygon, path
+      stroke-width: 2px
+      fill: currentColor
+.s3D
+  width: 1200px
+  height: 500px
+  outline: 2px solid red
+
+
+
+.section_1
+.s1_wrapper
+  display: flex
+  flex-direction: column
+  text-align: center
+  max-width: 129rem
+  padding-top: 4rem
+  .button
+    margin: 0 1.5rem
+
+.s1_items
+  max-width: 110rem
+  margin-top: 8em
+  display: flex
+  gap: 3rem
+  flex-wrap: wrap
+  padding: 0
+.s1_item
+  flex: 0 0 22rem
+  margin-left: auto
+  margin-right: auto
+  div
+    white-space: nowrap
+  span + span
+    margin-left: 1rem
+
+
+.s1__decoration
+  margin-top: 3em
+  height: 26em
+  width: 100%
+  background-image: url(../img/clouds1st.png), url(../img/bg-1.png)
+  background-position: 50% 0%, 50% 100%
+  background-repeat: repeat-x, repeat-x
+  background-size: 192em auto, 192em auto
+  @media (max-width: 1199px)
+    margin-top: 2em
+    font-size: calc(0.45px + 0.796vw )
+  @media (max-width: 575px)
+    margin-top: 0em
+
+.s1_wrapper
+  @media (max-width: 767px)
+    .h1
+      font-size: 3.6rem
+    .h2_l, .h2
+      font-size: 2.4rem
+  @media (max-width: 450px)
+    .h1
+      font-size: 3rem
+    .h2_l, .h2
+      font-size: 1.8rem
+
+
+.section_2
+.s2_headers
+  padding-bottom: 3em
+  max-width: 52em
+.section_headers
+  user-select: none
+  @media (max-width: 1329px)
+    max-width: 45em
+.s2_certificates.carousel__wrapper
+  $itemSize: 31em
+  $gap: 3em
+  max-width: 3*$itemSize + 3*$gap
+  margin-left: auto
+  li
+  img
+    box-shadow: 4px 4px 16px rgba(148, 176, 192, 0.17)
+  .carousel__button
+    position: absolute
+    top: -3.5em
+  .prev
+    right: 5.5em
+  .next
+    right: 1.5em
+  @media (max-width: 1649px)
+    max-width: 70em
+    .carousel__list_3 > *
+      width: 5%
+      max-width: 5%
+  @media (max-width: 1329px)
+    max-width: 65em
+  @media (max-width: 1199px)
+    max-width: 39em
+    .carousel__list_3 > *
+      width: 10%
+      max-width: 10%
+  @media (max-width: 991px)
+    max-width: 49em
+    margin-right: auto
+    .carousel__button
+      top: calc(50% - 2.5rem)
+    .prev
+      left: 1em
+    .next
+      right: 1em
+
+.s2_items
+  row-gap: 3em
+  @media (max-width: 991px)
+    padding-bottom: 2rem
+
+.s2_item
+  display: flex
+  flex-grow: 1
+  max-width: 40rem
+
+.section_2::after
+  display: block
+  position: absolute
+  top: 4.6rem
+  left: 50%
+  width: 192rem
+  height: auto
+  transform: translateX(-50%)
+  content: url(../img/bg-2.png)
+
+
+
+.section_3
+  padding-bottom: 12rem
+  &::after
+    display: block
+    position: absolute
+    bottom: -13rem
+    left: 50%
+    width: 192rem
+    height: auto
+    transform: translateX(-50%)
+    content: url(../img/bg-3.png)
+.s3_row
+  column-gap: 1rem
+  row-gap: 4rem
+  @media(max-width: 1199px)
+    row-gap: 3rem
+
+.s3_item
+  min-width: 50rem
+  max-width: 92rem
+  padding: 4rem 2rem 4rem 4rem
+  border-radius: 2rem
+  border: 1px solid $accent
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100%
+  pointer-events: none
+  header
+  section
+    margin-top: 2rem
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+    gap: 2rem
+  @media(max-width: 1199px)
+    padding: 3rem 2rem 3rem 3rem
+  @media(max-width: 767px)
+    padding: 2rem 1rem 2rem 2rem
+    min-width: 40rem
+    section
+      margin-top: 1rem
+      gap: 1rem
+.s3_item-s2
+  border-color: $accent_sec
+
+
+
+.section_4
+  &::after
+    display: block
+    position: absolute
+    bottom: 0rem
+    left: 50%
+    width: 192rem
+    height: auto
+    transform: translateX(-50%)
+    content: url(../img/bg-4.png)
+
+.s4_headers
+  position: relative
+  z-index: 1
+  pointer-events: none
+  margin-bottom: 4rem
+.section_4_col
+  width: auto
+  max-width: 40rem
+
+.activeMap_wrapper
+  margin-top: -25rem
+  @media(max-width: $breakpoint-max-xl)
+    margin-top: -12rem
+    .activeMap
+      max-width: 90rem
+      margin-right: -40rem
+.activeMapLabel
+  max-width: 100%
+  position: relative
+  z-index: 0
+  padding: 4rem 2rem
+  border-radius: 2rem
+  flex-direction: column
+  gap: 2rem
+  background-color: $active_light
+  border: 1px solid $accent
+  display: flex
+  position: absolute
+  top: 0
+  opacity: 0
+  transform: scale(.5)
+  color: $active_light
+  &.active
+    transform: scale(1)
+    opacity: 1
+    z-index: 1
+    color: inherit
+    position: relative
+    transition: color .3s linear .3s
+    .flag
+      transition: opacity .3s linear .3s
+
+.activeMapLabel_header
+  display: flex
+  gap: 2rem
+.activeMapLabel_section
+  display: flex
+  flex-direction: column
+  gap: 2rem
+.activeMapLabel_section_item
+  display: flex
+  gap: 1rem
+@media(max-width: $breakpoint-max-lg)
+  .section_4
+    padding-top: 0
+  .s4_headers
+    order: -1
+    margin-bottom: 2rem
+  .activeMap_wrapper
+    order: -1
+    margin-top: unset
+
+.activeMapMobile
+  display: flex
+  flex-wrap: wrap
+  gap: 2rem
+  min-width: 30rem
+  padding-bottom: 2rem
+.activeMapMobile_Item
+  position: relative
+  padding: 2rem
+  border-radius: 2rem
+  background-color: $active_light
+  border: 1px solid $accent
+  &>*
+    pointer-events: none
+  &:hover, &:focus, &.active
+    padding: 2rem
+    border-radius: 2rem
+    background-color: $accent_mid
+    border: 1px solid $accent_mid
+
+
+
+
+.section_5
+  &::after
+    display: block
+    position: absolute
+    bottom: -3rem
+    left: 50%
+    width: 192rem
+    height: auto
+    transform: translateX(-50%)
+    content: url(../img/bg-5.png)
+.s5_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr))
+  grid-row-gap: 6rem
+  grid-column-gap: 4rem
+  @media(max-width: $breakpoint-max-xxl)
+    grid-row-gap: 4rem
+  grid-column-gap: 3rem
+  @media(max-width: $breakpoint-max-xl)
+
+    grid-row-gap: 4rem
+
+.s5_item
+  display: flex
+  .main
+    display: flex
+    flex-direction: column
+    justify-content: stretch
+
+.section_6
+  padding-top: 10rem
+  padding-bottom: 6rem
+.s6_headers
+.s6_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+  grid-gap: 4rem
+  @media(max-width: $breakpoint-max-xxl)
+    grid-gap: 3rem
+  @media(max-width: $breakpoint-max-xl)
+    grid-gap: 2rem
+.s6_item
+  display: flex
+  align-items: center
+
+
+.section_7
+  padding-top: 18rem
+  padding-bottom: 6rem
+  &::after
+    display: block
+    position: absolute
+    top: -1rem
+    left: 50%
+    width: 192rem
+    height: auto
+    transform: translateX(-50%)
+    content: url(../img/bg-6.png)
+.s7_headers
+.s7_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+  grid-gap: 4rem
+  @media(max-width: $breakpoint-max-xxl)
+    grid-gap: 3rem
+  @media(max-width: $breakpoint-max-xl)
+    grid-row-gap: 4rem
+  @media(max-width: $breakpoint-max-md)
+.s7_item
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  max-width: 40rem
+
+.section_8
+  padding-top: 16rem
+  padding-bottom: 6rem
+  &::after
+    display: block
+    position: absolute
+    top: 9rem
+    left: 50%
+    width: 192rem
+    height: auto
+    transform: translateX(-50%)
+    content: url(../img/bg-7.png)
+.s8_headers
+.s8_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr))
+  grid-gap: 4rem
+.s8_item
+  display: flex
+  align-items: center
+  max-width: 70ch
+
+
+.section_9
+  padding-top: 13rem
+  padding-bottom: 6rem
+.s9_headers
+.s9_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+  grid-gap: 4rem 6rem
+  @media(max-width: $breakpoint-max-xxl)
+    grid-gap: 2rem 6rem
+  @media(max-width: $breakpoint-max-xl)
+    grid-row-gap: 4rem
+  @media(max-width: $breakpoint-max-md)
+.s9_item
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  max-width: 40rem
+
+.section_10
+  padding-top: 18rem
+  padding-bottom: 6rem
+  &::after
+    display: block
+    position: absolute
+    top: 0rem
+    left: 50%
+    width: 192rem
+    height: auto
+    transform: translateX(-50%)
+    content: url(../img/bg-8.png)
+.s10_headers
+.s10_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
+  grid-gap: 4rem 4rem
+  @media(max-width: $breakpoint-max-xl)
+    grid-row-gap: 3rem
+.s10_item
+  display: flex
+  align-items: center
+
+
+.section_11
+  padding-top: 9rem
+  padding-bottom: 6rem
+  &::after
+    display: block
+    position: absolute
+    bottom: 0rem
+    left: 50%
+    width: 192rem
+    height: auto
+    transform: translateX(-50%)
+    content: url(../img/bg-9.png)
+.s11_headers
+.s11_items
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  gap: 4rem
+.s11_item
+  flex: 0 1 51rem
+.s11_item_header
+  display: flex
+  align-items: center
+
+.section_12
+  padding-top: 9rem
+  padding-bottom: 6rem
+.s12_headers
+  &>*
+    max-width: 46rem
+.s12_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr))
+  grid-auto-rows: 1fr
+  grid-gap: 5rem 4rem
+  padding-top: 4rem
+
+
+.section_13
+  padding-top: 16rem
+  padding-bottom: 0
+  &::after
+    display: block
+    position: absolute
+    top: 0rem
+    left: 50%
+    width: 192rem
+    height: auto
+    transform: translateX(-50%)
+    content: url(../img/bg-10.png)
+.s13_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+  grid-gap: 2rem
+.s13_item
+  white-space: nowrap
+  display: flex
+  align-items: center
+.s13_map
+  position: relative
+  padding-top: 40%
+  margin-top: 4rem
+  border-radius: 2rem
+  overflow: hidden
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+@media (max-width: $breakpoint-max-lg)
+  .section
+    padding-top: 8rem
+    padding-bottom: 0
+  .s1_wrapper
+    padding-top: 0
+
+@media (max-width: $breakpoint-max-md)
+  .section
+    &:after
+      width: 960px
+  .section_1
+    padding-top: 4rem
+  .s1_wrapper .button
+    margin: 1rem
+  .s1_items
+    margin-top: 2rem
+  .section_8
+    &:after
+      width: 192rem
+      left: 0
+  .section_11
+    &:after
+      width: 192rem
+      left: 0
+      top: 0
+
+
+

@@ -1,0 +1,78 @@
+@use "../base/variables" as *
+
+$c_gap: 1.5rem
+//list and buttons
+.carousel__wrapper
+  position: relative
+  width: 100%
+  display: flex
+
+  @media (max-width: 991px)
+    padding: 0 $c_gap*4
+//buttons
+.carousel__button
+  //width: $c_gap*2
+  //height: $c_gap*2
+  background-size: contain
+  cursor: pointer
+  &.prev
+
+  &.next
+
+    transform: rotate(180deg)
+
+//list
+.carousel_frame
+  width: 100%
+  overflow-x: hidden
+  position: relative
+  //&::before, &::after
+    pointer-events: none
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    bottom: 0
+  //&::after
+    right: 0
+    width: 1rem
+    background: linear-gradient(90deg, transparent, $bg)
+  //&::before
+    left: 0
+    width: 1rem
+    background: linear-gradient(270deg, transparent, $bg)
+.carousel__list
+  width: 1000%
+  height: 100%
+  display: flex
+  align-items: center
+  position: relative
+  & > *
+    padding: $c_gap
+    display: flex
+    height: 100%
+    width: 10%
+    align-items: center
+    justify-content: center
+.carousel__list_2
+  & > *
+    width: 5%
+    max-width: 5%
+    @media (max-width: 991px)
+      width: 10%
+      max-width: 10%
+.carousel__list_3
+  & > *
+    width: 3.33333%
+    max-width: 3.33333%
+    @media (max-width: 991px)
+      width: 10%
+      max-width: 10%
+.carousel__list_4
+  & > *
+    width: 2.5%
+    max-width: 2.5%
+    @media (max-width: 991px)
+      width: 10%
+      max-width: 10%
+

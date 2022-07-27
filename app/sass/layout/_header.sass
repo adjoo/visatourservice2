@@ -1,0 +1,75 @@
+//все стили секции Хэдера
+@use "../base/variables" as *
+
+.header
+  padding: 2rem 1rem
+  @media (max-width: $breakpoint-max-xl)
+    padding: 1.5rem 0rem
+
+.header_logo__wrapper
+  display: flex
+  max-width: 20rem
+  min-width: 20rem
+  user-select: none
+
+.header_logo__img
+  width: 4.2em
+  height: 4.2em
+  flex-shrink: 0
+  margin-right: .7em
+.header_logo__company
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+.header_logo__company__name
+  line-height: 1
+.header_logo__company__describer
+  width: 14rem
+  line-height: 1
+  padding-top: 2px
+  border-top: 1px solid $accent
+
+.header_nav
+  display: flex
+  align-items: center
+  white-space: nowrap
+  gap: 3em
+  @media (min-width: $breakpoint-min-extra)
+    gap: 5em
+
+.header_nav
+  @media (max-width: $breakpoint-max-xl)
+    gap: 5rem
+  @media (max-width: $breakpoint-max-lg)
+    padding: 1rem 0 0
+    min-width: 50rem
+    justify-content: space-between
+    flex-wrap: wrap
+    .header_navLink
+      margin: 1rem 1.5rem 0
+  @media (max-width: $breakpoint-max-sm)
+    min-width: 28rem
+
+.header_phoneNumber
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  white-space: nowrap
+  span
+    margin-right: 1rem
+  span, strong
+    font-size: 2.4rem
+  .button
+    margin-left: 1rem
+  @media (max-width: $breakpoint-max-xl)
+    span
+      margin-right: unset
+    span, strong
+      font-size: 1.8rem
+  @media (max-width: $breakpoint-max-sm)
+    span, strong
+      display: none
+
+
+
+

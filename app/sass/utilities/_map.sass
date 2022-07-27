@@ -1,0 +1,36 @@
+@use "../base/variables" as *
+
+.activeMap
+  width: 129em
+  height: 91em
+  position: relative
+  .map_pointer
+    content: url(../img/svg/map_pointer.svg)
+    position: absolute
+    z-index: 1
+    left: 0
+    top: 0
+    pointer-events: none
+    width: 5.8rem
+    height: 5.8rem
+  a
+    position: relative
+  svg
+
+  svg a path
+    fill: $active_light
+    stroke: $accent
+    stroke-linecap: round
+    stroke-linejoin: round
+  svg a:hover path
+    fill: $accent_mid
+    stroke: $active_heavy
+
+  svg
+
+    a.active
+      fill: red
+      path
+        fill: $accent_mid
+
+

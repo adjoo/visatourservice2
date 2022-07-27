@@ -1,0 +1,79 @@
+//стили Выпадающих окон общие и в частности
+@use "../base/variables" as *
+.mfp_popup_window
+  .mfp-container
+    opacity: 0
+    transition: all .2s ease
+    transform: scaleY(0.9)
+    transform-origin: center
+  &.mfp-bg
+    background-color: rgba($bg, .0)
+    //opacity: 0
+    //transition: opacity .3s ease 0s
+    transition: background-color .3s ease 0s
+  &.mfp-ready
+    .mfp-container
+      opacity: 1
+      transform: scaleY(1)
+      transform-origin: center
+      transition: all .2s ease 0s
+    &.mfp-bg
+      //opacity: 0.6
+      background-color: rgba($bg, .6)
+      //transition: opacity .3s ease 0s
+      transition: background-color .3s ease 0s
+      backdrop-filter: grayscale(1) blur(5px)
+  &.mfp-removing
+    .mfp-container
+      transform: scaleY(0.6)
+      opacity: 0
+    &.mfp-bg
+      opacity: 0
+.popup_window
+  position: relative
+  margin: auto
+  width: 38em
+  max-width: 38em
+  min-height: 20em
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: $bg
+  padding: 4em
+  border-radius: 2em
+  box-shadow: 0em 0em 2em -.5em $gray
+  background: url(../img/Form.png) center center no-repeat
+  background-size: cover
+  @media (max-width: $breakpoint-max-sm)
+  .mfp-close
+    display: block
+    position: absolute
+    top: 0.66em
+    right: 0.66em
+    color: $dark_text
+    min-width: unset
+    min-height: unset
+    width: .5em
+    height: .5em
+    font-size: 6em
+    line-height: .5em
+    font-weight: $fw_reg
+    font-family: inherit
+    opacity: 1
+    &:hover,&:focus, &:active
+      color: $accent
+  form
+    .description
+      text-align: center
+
+.popup_window__title
+  margin-right: auto
+.popup_form
+  margin-top: 4rem
+  width: 100%
+  display: flex
+  flex-direction: column
+  gap: 2rem
+  input[type="submit"]
+    margin-top: 2rem

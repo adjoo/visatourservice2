@@ -1,0 +1,102 @@
+//оформление элементов, которые выглядят как кнопки, втч ссылок как кнопки
+
+@use "../base/variables" as *
+
+button, .button
+  display: inline-flex
+  font-size: 1.4rem
+  line-height: 1.2
+  font-weight: $fw_medium
+  align-items: center
+  justify-content: center
+  padding-left: 1em
+  padding-right: 1em
+  text-align: center
+  white-space: nowrap
+
+
+.button-svg
+  width: 2.855em
+  height: 2.855em
+  border-radius: 50%
+  border: 1px solid currentcolor
+  color: $accent
+  padding: 0
+  &:hover, &:active
+    border: 1px solid $active_light
+    background-color: $active_light
+    color: $accent
+    border-radius: 2em
+  svg
+    width: 1.28em
+    height: 1.28em
+  &:focus
+    border: 1px solid currentcolor
+    background-color: unset
+    color: $accent
+    border-radius: 2em
+
+.button_style_1
+  padding: 1.5rem 4rem
+  color: $bg
+  background-color: $accent
+  border-radius: 2rem
+  &:hover, &:active
+    border-radius: 2rem
+    color: $bg
+    background-color: $active_heavy
+  &:focus
+    border-radius: 2rem
+    color: $bg
+    background-color: $accent
+.button_style_2
+  padding: 1.5rem 4rem
+  color: $accent
+  background-color: $bg
+  border-radius: 2rem
+  border: 1px solid currentColor
+  &:hover, &:active
+    border-radius: 2rem
+    color: $bg
+    background-color: $active
+    border: 1px solid $active
+  &:focus
+    color: $accent
+    background-color: $bg
+    border-radius: 2rem
+    border: 1px solid currentColor
+
+
+.button_style_3
+  padding: 1rem 2rem
+  color: $accent
+  background-color: $active_light
+  border-radius: 2rem
+  border: 1px solid currentColor
+  &:hover, &:active
+    border-radius: 2rem
+    color: $bg
+    background-color: $active
+    border: 1px solid $active
+  &:focus
+    color: $accent
+    background-color: $active_light
+    border-radius: 2rem
+    border: 1px solid currentColor
+
+.button_style_4
+  padding: 1rem 2rem
+  color: $accent_sec
+  background-color: $accent_sec_light
+  border-radius: 2rem
+  border: 1px solid currentColor
+  &:hover, &:active
+    border-radius: 2rem
+    color: $bg
+    background-color: $accent_sec
+    border: 1px solid $accent_sec
+  &:focus
+    color: $accent_sec
+    background-color: $accent_sec_light
+    border-radius: 2rem
+    border: 1px solid currentColor

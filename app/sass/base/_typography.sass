@@ -1,0 +1,142 @@
+@use "variables" as *
+
+//span 14 - auto - regular - dark_text
+.span
+  font-size: 1.4rem
+  line-height: 1.5
+  font-weight: $fw_reg
+//a inherit - inherit - inherit
+.a
+  font-size: inherit
+  line-height: inherit
+  font-weight: inherit
+
+//strong inherit - inherit - bold - dark_text
+.strong
+  font-size: inherit
+  line-height: inherit
+  font-weight: $fw_bold
+
+//p 14 - 150% - regular - dark_text
+.p
+  max-width: 60ch
+  font-size: 1.4rem
+  line-height: 1.5
+  font-weight: $fw_reg
+
+//H1 55px - 120% - semi - dark_text
+.h1
+  font-size: 5.5rem
+  line-height: 1.2
+  font-weight: $fw_semibold
+  @media (max-width: 1329px)
+    font-size: 4.8rem
+  @media (max-width: 991px)
+    font-size: 3.1rem
+
+
+//H2 40px - 49px - semi - dark_text
+.h2
+  font-size: 4rem
+  line-height: 1.225
+  font-weight: $fw_semibold
+  @media (max-width: 1329px)
+    font-size: 3rem
+
+//H2 36px - 133% - light - dark_text
+.h2_l
+  font-size: 3.6rem
+  line-height: 1.33
+  font-weight: $fw_light
+  @media (max-width: 1329px)
+    font-size: 3rem
+  @media (max-width: 991px)
+    font-size: 2.2rem
+//H2 36px - 133% - regular - dark_text
+.h2_m
+  font-size: 3.6rem
+  line-height: 1.33
+  font-weight: $fw_medium
+  @media (max-width: 1329px)
+    font-size: 3rem
+  @media (max-width: 991px)
+    font-size: 2.2rem
+//H3 18 - 150% - semi - dark_text
+.h3
+  font-size: 1.8rem
+  line-height: 1.5
+  font-weight: $fw_semibold
+  @media (max-width: 991px)
+    font-size: 1.6rem
+//H3_r 18 - 150% - semi - dark_text
+.h3_r
+  font-size: 1.8rem
+  line-height: 1.5
+  font-weight: $fw_reg
+  @media (max-width: 991px)
+    font-size: 1.6rem
+//H4 14 - 150% - light - dark_text
+.h4
+  font-size: 1.4rem
+  line-height: 1.5
+  font-weight: $fw_light
+
+//H5 14 -130% - medium - dark_text
+.h5
+  font-size: 1.4rem
+  line-height: 1.3
+  font-weight: $fw_medium
+//H6 14 -130% - medium - dark_text
+.h6
+  @extend .h5
+  font-family: $font_alt
+  line-height: 2
+
+//description 11 -100% - regular - dark_text
+.description
+  font-size: 1.1rem
+  line-height: 1.2
+  font-weight: $fw_reg
+
+
+.numbersBold
+  font-size: 3.6rem
+  line-height: 1.2
+  font-weight: $fw_bold
+
+.numbersMedium
+  font-size: 1.4rem
+  line-height: 1.2
+  font-weight: $fw_medium
+  font-family: $font_alt
+
+.numbersInMarker
+  font-size: 2.4rem
+  line-height: 1
+  font-weight: $fw_bold
+  font-family: $font_alt
+.textInMarker
+  font-size: 1rem
+  line-height: 1
+  font-weight: $fw_medium
+
+.accent
+  color: $accent
+.accent-sec
+  color: $accent_sec
+.accent-light
+  color: $light
+
+
+.uppercase
+  text-transform: uppercase
+
+
+.bold
+  font-weight: $fw_bold
+.light
+  font-weight: $fw_light
+.regular
+  font-weight: $fw_reg
+.medium
+  font-weight: $fw_medium

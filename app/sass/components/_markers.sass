@@ -1,0 +1,61 @@
+//оформление списков, чередующихся элементов с маркерами
+@use "../base/variables" as *
+
+.marker
+  display: inline-flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  min-width: 3rem
+  position: relative
+  margin-right: 2rem
+  overflow: hidden
+  user-select: none
+  &:before
+    position: absolute
+    display: block
+    content: ''
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    opacity: .2
+    background-color: currentColor
+  svg, img
+    max-width: 4rem
+    max-height: 4rem
+
+.marker-s1
+  min-width: 5.8rem
+  max-width: 5.8rem
+  min-height: 5.8rem
+  max-height: 5.8rem
+  border-radius: 2rem
+.marker-s2
+  min-width: 6rem
+  max-width: 6rem
+  min-height: 6rem
+  max-height: 6rem
+  border-radius: 2rem
+.marker-s3
+  min-width: 5rem
+  max-width: 5rem
+  min-height: 5rem
+  max-height: 5rem
+  border-radius: 2rem
+
+
+.marker-s11
+  min-width: 7.4rem
+  max-width: 7.4rem
+  min-height: 7.4rem
+  max-height: 7.4rem
+  border-radius: 2.5rem
+  img
+    position: relative
+    min-width: 5.8rem
+    max-width: 5.8rem
+    min-height: 5.8rem
+    max-height: 5.8rem
+    border-radius: 2rem
+.marker-s12

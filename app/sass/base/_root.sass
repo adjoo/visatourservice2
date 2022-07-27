@@ -1,0 +1,25 @@
+//стиль корневого элемента. базовый размер шрифта
+@use "variables" as *
+html
+  font-size: 62.5%
+  font-family: $font
+  font-style: normal
+  color: $dark_text
+  background-color: $bg
+  max-width: 1920px
+  min-width: 320px
+  margin: auto
+  overflow-x: hidden
+  @media (max-width: 510px)
+    font-size: clamp(7px, calc(1.95px + 1.579vw), 10px )
+  @media (max-width: 991px) and (orientation: landscape)
+    //font-size: clamp(7px, calc(4.71px + 0.714vw), 9px )
+body
+  overflow-x: hidden
+  max-width: 100%
+  min-width: 320px
+  box-shadow: 0vw 0vw 2vw #0003
+  ::selection
+    background: $active
+    color: $bg
+
