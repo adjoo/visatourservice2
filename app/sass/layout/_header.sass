@@ -2,9 +2,16 @@
 @use "../base/variables" as *
 
 .header
+  position: fixed
+  top: 0px
+  z-index: 5
   padding: 2rem 1rem
   @media (max-width: $breakpoint-max-xl)
     padding: 1.5rem 0rem
+  background-color: $bg
+  box-shadow: 0 0 1rem 1rem $bg
+  width: 100%
+
 
 .header_logo__wrapper
   display: flex

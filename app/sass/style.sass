@@ -34,6 +34,8 @@
   gap: 3rem
   flex-wrap: wrap
   padding: 0
+  @media (max-width: $breakpoint-max-lg)
+    margin-top: 5rem
 .s1_item
   flex: 0 0 22rem
   margin-left: auto
@@ -479,9 +481,11 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
   grid-gap: 2rem
 .s13_item
-  white-space: nowrap
   display: flex
   align-items: center
+  .main>*
+    line-height: 1.1
+    margin: .5rem 0
 .s13_map
   position: relative
   padding-top: 40%
